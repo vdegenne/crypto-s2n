@@ -1,0 +1,52 @@
+{
+	"name": "crypto-s2n",
+	"version": "1.0.0",
+	"description": "Crypto Symbol to Name Converter",
+	"type": "module",
+	"exports": {
+		".": {
+			"import": "./sn-map.json"
+		}
+	},
+	"scripts": {
+		"build": "wireit"
+	},
+	"files": [
+		"./sn-map.json"
+	],
+	"devDependencies": {
+		"node-fetch": "^3.3.2",
+		"typescript": "^5.5.4",
+		"wireit": "^0.14.7"
+	},
+	"wireit": {
+		"build": {
+			"dependencies": [
+				"fetch-coinmarketcap-data"
+			]
+		},
+		"fetch-coinmarketcap-data": {
+			"command": "node ./scripts/fetch-coinmarketcap-data.js",
+			"files": [
+				"./scripts/fetch-coinmarketcap-data.js"
+			],
+			"output": [
+				"./sn-map.json"
+			]
+		},
+		"build:ts": {
+			"command": "tsc --pretty",
+			"dependencies": [
+				"fetch-coinmarketcap-data"
+			],
+			"clean": "if-file-deleted",
+			"files": [
+				"tsconfig.json",
+				"src"
+			],
+			"output": [
+				"lib"
+			]
+		}
+	}
+}
