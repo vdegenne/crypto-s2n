@@ -1,11 +1,12 @@
 {
 	"name": "crypto-s2n",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Crypto Symbol to Name Converter",
 	"type": "module",
 	"exports": {
 		".": {
-			"import": "./sn-map.json"
+			"import": "./sn-map.json",
+			"types": "./types.d.ts"
 		}
 	},
 	"scripts": {
