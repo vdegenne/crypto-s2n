@@ -1,6 +1,6 @@
 {
 	"name": "crypto-s2n",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Crypto Symbol to Name Converter",
 	"type": "module",
 	"exports": {
@@ -13,7 +13,8 @@
 		"build": "wireit"
 	},
 	"files": [
-		"./sn-map.json"
+		"./sn-map.json",
+		"./types.d.ts"
 	],
 	"devDependencies": {
 		"node-fetch": "^3.3.2",
