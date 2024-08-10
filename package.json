@@ -1,6 +1,6 @@
 {
 	"name": "crypto-s2n",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Crypto Symbol to Name Converter",
 	"type": "module",
 	"exports": {
